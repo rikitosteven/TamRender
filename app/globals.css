@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-gray-dark font-sans;
+  }
+
+  h1 {
+    @apply font-display text-5xl md:text-7xl font-bold leading-tight tracking-tight text-gray-darker;
+  }
+
+  h2 {
+    @apply font-display text-4xl md:text-5xl font-bold leading-tight tracking-tight text-gray-darker;
+  }
+
+  h3 {
+    @apply font-display text-2xl md:text-3xl font-semibold leading-snug text-gray-darker;
+  }
+
+  h4 {
+    @apply font-display text-xl md:text-2xl font-semibold text-gray-dark;
+  }
+
+  p {
+    @apply font-sans text-base md:text-lg leading-relaxed text-gray-dark;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 sm:px-8 py-3 sm:py-4 bg-accent-charcoal text-cream font-sans font-medium rounded-none border border-accent-charcoal hover:bg-cream hover:text-accent-charcoal transition-all duration-300 min-h-12 sm:min-h-12 flex items-center justify-center uppercase tracking-widest text-sm;
+  }
+
+  .btn-secondary {
+    @apply px-6 sm:px-8 py-3 sm:py-4 bg-transparent text-accent-charcoal font-sans font-medium rounded-none border border-accent-charcoal hover:bg-accent-charcoal hover:text-cream transition-all duration-300 min-h-12 sm:min-h-12 flex items-center justify-center uppercase tracking-widest text-sm;
+  }
+
+  .btn-outline {
+    @apply px-4 sm:px-6 py-2 sm:py-3 bg-transparent text-gray-dark font-sans font-medium text-xs sm:text-sm rounded-none border border-gray-medium hover:bg-gray-dark hover:text-cream transition-all duration-300 min-h-10 sm:min-h-12 flex items-center justify-center;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 md:px-12 lg:px-16 py-16 sm:py-24 md:py-32 lg:py-40;
+  }
+
+  .section-padding-sm {
+    @apply px-4 sm:px-6 md:px-12 lg:px-16 py-12 sm:py-16 md:py-24 lg:py-32;
+  }
+
+  .grid-collapse {
+    @apply -mx-6 md:-mx-12 lg:-mx-16;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .container-max-lg {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .uppercase-label {
+    @apply text-xs uppercase tracking-widest font-medium text-gray-neutral;
+  }
+
+  .link-hover {
+    @apply hover:text-gray-medium transition-colors duration-300;
+  }
+
+  .touch-target {
+    @apply min-h-12 flex items-center;
+  }
+
+  /* Form inputs */
+  input,
+  select,
+  textarea {
+    &:not([type="checkbox"]):not([type="radio"]) {
+      font-size: 16px;
+      min-height: 48px;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    @apply transition-colors duration-300;
+  }
+
+  /* Mobile optimization */
+  @media (max-width: 640px) {
+    .section-padding {
+      @apply px-4 py-16;
+    }
+
+    .grid-collapse {
+      @apply -mx-4;
+    }
+  }
+
+  /* Prevent zoom on input focus for iOS */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Smooth animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Smooth animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
