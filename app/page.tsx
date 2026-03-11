@@ -15,8 +15,8 @@ export default function Home() {
       <FeaturedProjects projects={featuredProjects} />
       <StudioStory />
       <BeforeAfterSlider
-        beforeImage="/AT HOUSE/2.jfif"
-        afterImage="/AT HOUSE/3.jfif"
+        beforeImage="/AT-HOUSE/2.jfif"
+        afterImage="/AT-HOUSE/3.jfif"
         title="Design Transformation"
         description="Witness how thoughtful design reimagines a space from concept to completion"
       />
